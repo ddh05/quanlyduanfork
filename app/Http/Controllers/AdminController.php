@@ -29,7 +29,7 @@ class AdminController extends Controller
         if (Auth::guard('admins')->attempt($credentials)) {
             return redirect()->route('admin.dashboard');
         } else {
-            return redirect()->route('admin_login')->withErrors(['email' => 'Đăng nhập không thành công']);
+            return redirect()->route('admin_login')->withErrors(['username' => 'Đăng nhập không thành công']);
         }
     }
 
